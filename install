@@ -1,0 +1,40 @@
+#!/usr/local/bin/zsh
+
+set -e
+
+XRCDIR=$(cd `dirname $0` && pwd)
+
+if [ ! -d ~/.config ]; then
+  mkdir ~/.config
+fi
+
+if [ ! -d ~/.comnfig/vim ]; then
+  echo "Linking vim config"
+  ln -sv $XRCDIR/vim ~/.config
+  ln -svf $XRCDIR/vim/init.vim ~/.vimrc
+  echo "Installing dein"
+  curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/dein-installer.sh
+  sh /tmp/dein-installer.sh ~/.cache/dein
+fi
+
+if [ ! -d ~/.config/git ]; then
+  echo "Linking git config"
+  ln -sv $XRCDIR/git ~/.config
+fi
+
+if [ ! -f ~/.zshrc ]; then
+  echo "Copying .zshrc"
+  cp -v $XRCDIR/zshrc ~/.zshrc
+fi
+
+if [ ! -f ~/.zimrc ]; then
+  echo "Installing zim"
+  setopt EXTENDED_GLOB
+  setopt NO_CLOBBER
+  for template_file in ${XRCDIR}/zim/templates/*; do
+    user_file="${HOME}/.${template_file:t}"
+    ( print -rn "$(<${template_file})$(<${user_file})" > ${user_file} ) 2>/dev/null
+  done
+fi
+
+echo "XRC applied!"
