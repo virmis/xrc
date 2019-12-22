@@ -89,3 +89,4 @@ alias t='todo.sh'
 
 alias ap='ansible-playbook'
 alias k='kubectl'
+alias python='/usr/local/bin/python3'

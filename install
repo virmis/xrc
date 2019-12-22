@@ -1,4 +1,4 @@
-#!/usr/local/bin/zsh
+#!/bin/zsh
 
 set -e
 
@@ -8,7 +8,7 @@ if [ ! -d ~/.config ]; then
   mkdir ~/.config
 fi
 
-if [ ! -d ~/.comnfig/vim ]; then
+if [ ! -d ~/.config/vim ]; then
   echo "Linking vim config"
   ln -sv $XRCDIR/vim ~/.config
   ln -svf $XRCDIR/vim/init.vim ~/.vimrc
