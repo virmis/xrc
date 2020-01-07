@@ -9,8 +9,8 @@ let g:lightline = {
       \   'readonly': '_readonly',
       \   'filename': '_filename',
       \ },
-      \ 'separator': { 'left': '⮀', 'right': '⮂' },
-      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '|', 'right': '|' }
       \ }
 
 function! _readonly()
