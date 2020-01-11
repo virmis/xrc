@@ -95,3 +95,7 @@ alias pip='/usr/local/bin/pip3'
 # AWS stuff
 alias awsume=". awsume"
 
+alias tga="terragrunt apply"
+alias tgp="terragrunt plan"
+alias tgd="terragrunt destroy"
+
