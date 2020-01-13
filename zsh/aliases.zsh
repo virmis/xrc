@@ -76,7 +76,6 @@ alias gdmb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
 # Common shell functions
 alias less='less -r'
-alias tf='tail -f'
 alias l='less'
 alias lh='ls -alt | head' # see the last modified files
 alias cl='clear'
@@ -93,9 +92,17 @@ alias python='/usr/local/bin/python3'
 alias pip='/usr/local/bin/pip3'
 
 # AWS stuff
-alias awsume=". awsume"
+alias awsume='. awsume'
 
-alias tga="terragrunt apply"
-alias tgp="terragrunt plan"
-alias tgd="terragrunt destroy"
+# Terraform
+alias tf='terraform'
+alias tfa='terraform apply'
+alias tfp='terraform plan'
+alias tfd='terraform destroy'
+
+# Terragrunt
+alias tg='terragrunt'
+alias tga='terragrunt apply'
+alias tgp='terragrunt plan'
+alias tgd='terragrunt destroy'
 
