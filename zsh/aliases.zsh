@@ -83,16 +83,13 @@ alias cl='clear'
 # Zippin
 alias gz='tar -zcvf'
 
-# TODOS
-alias t='todo.sh'
-
 alias ap='ansible-playbook'
 alias k='kubectl'
 alias python='/usr/local/bin/python3'
 alias pip='/usr/local/bin/pip3'
 
 # AWS stuff
-alias awsume='. awsume'
+alias awsume=awsume_wrap
 
 # Terraform
 alias tf='terraform'
