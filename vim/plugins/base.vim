@@ -1,5 +1,5 @@
 " Base vim plugins
-call dein#add("Shougo/defx.nvim")
+call dein#add("preservim/nerdtree")
 call dein#add("Shougo/vimshell.vim")
 call dein#add("Shougo/deoplete.nvim")
 if !has('nvim')

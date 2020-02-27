@@ -90,6 +90,7 @@ alias pip='/usr/local/bin/pip3'
 
 # AWS stuff
 alias awsume=awsume_wrap
+alias awl='. awsume -l'
 
 # Terraform
 alias tf='terraform'
@@ -103,3 +104,4 @@ alias tga='terragrunt apply'
 alias tgp='terragrunt plan'
 alias tgd='terragrunt destroy'
 
+alias psql='/usr/local/opt/libpq/bin/psql'
